@@ -29,7 +29,7 @@ constructor(
     private val viewModel: MainViewModel by viewModels()
 
     @Inject
-    lateinit var catsAdapter: AdapterDogs
+    lateinit var dogsAdapter: AdapterDogs
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,7 +44,7 @@ constructor(
         layoutManager.reverseLayout = true
         layoutManager.stackFromEnd = true
         recyclerViewDogs.layoutManager = layoutManager
-        recyclerViewDogs.adapter = catsAdapter
+        recyclerViewDogs.adapter = dogsAdapter
 
         subscribeObservers()
         lifecycleScope.launch {
@@ -59,7 +59,7 @@ constructor(
                     is DataState.Success -> {
                         displayProgressBar(false)
 //                    appendCatID(dataState.data)
-                        catsAdapter.setCats(it.dogs)
+                        dogsAdapter.setCats(it.dogs)
                     }
                     is DataState.Error -> {
                         displayProgressBar(false)

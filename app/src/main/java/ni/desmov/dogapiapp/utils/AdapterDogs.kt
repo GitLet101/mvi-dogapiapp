@@ -36,13 +36,14 @@ class AdapterDogs () : RecyclerView.Adapter<AdapterDogs.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model= items[position]
         holder.sizeInfo.text="${model.width} x ${model.height}"
+
         Picasso.get()
             .load(model.url)
-            .into( holder.catImage)
+            .into( holder.dogImage)
     }
     class ViewHolder (view: View) : RecyclerView.ViewHolder(view) {
         // Holds the TextView that will add each picture to
-        val catImage: ImageView = view.dog_image
+        val dogImage: ImageView = view.dog_image
         val sizeInfo: TextView = view.size_info
     }
 }
