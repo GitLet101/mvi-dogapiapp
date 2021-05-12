@@ -10,3 +10,7 @@ asignacion de desarrollo de aplicaciones moviles
 + Pedro Benjamin Ramirez Alvarez
 + Patrick Reyes Guevara	Estudiante
 + Yaro Alejandro Flores Tellez
+
+## Mas Codigo:
++ https://github.com/AlejandroFloresW/DogApi
++ https://github.com/lu1815/dog_mvi
